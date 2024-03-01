@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 import { TasksService } from './tasks.service';
 import { Task } from './task.model';
-import { createTaskDto } from './task.dto';
+import { createTaskDto } from './dto/task.dto';
 
 @Controller('tasks')
 export class TasksController {
