@@ -4,14 +4,14 @@ import {
   Delete,
   Get,
   Param,
-  Patch,
+  ParseIntPipe,
   Post,
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
 import { TasksService } from './tasks.service';
 import { Task } from './task.model';
-import { createTaskDto } from './dto/task.dto';
+import { createTaskDto } from './dto/createTask.dto';
 
 @Controller('tasks')
 export class TasksController {
@@ -23,7 +23,7 @@ export class TasksController {
   }
 
   @Get('/:id')
-  getTaskByID(@Param('id') id: string): Task {
+  async getTaskByID(@Param('id', ParseIntPipe) id: number): Promise<Task> {
     return this.taskService.getTaskByID(id);
   }
 
