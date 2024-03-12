@@ -7,11 +7,12 @@ import {
 } from 'typeorm';
 import { TaskStatus } from './task.model';
 import { Exclude } from 'class-transformer';
+import { User } from 'src/auth/user.entity';
 
 @Entity()
 export class Task extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Column()
   title: string;

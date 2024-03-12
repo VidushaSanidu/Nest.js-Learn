@@ -4,6 +4,7 @@ import { InternalServerErrorException, Logger } from '@nestjs/common';
 import { GetTasksFilterDto } from './dto/getTaskFilter.dto';
 import { createTaskDto } from './dto/createTask.dto';
 import { TaskStatus } from './task.model';
+import { User } from 'src/auth/user.entity';
 
 @EntityRepository(Task)
 export class TaskRepository extends Repository<Task> {
