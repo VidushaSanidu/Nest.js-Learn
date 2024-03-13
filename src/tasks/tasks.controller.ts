@@ -10,12 +10,12 @@ import {
   Query,
 } from '@nestjs/common';
 import { TasksService } from './tasks.service';
-import { Task } from './task.model';
 import { createTaskDto } from './dto/createTask.dto';
 import { GetTasksFilterDto } from './dto/getTaskFilter.dto';
 import { UpdateTaskStatusDto } from './dto/updateTask.dto';
 import { GetUser } from 'src/auth/get-user.decorator';
 import { User } from 'src/auth/user.entity';
+import { Task } from './task.entity';
 
 @Controller('tasks')
 export class TasksController {

@@ -5,9 +5,10 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { TaskStatus } from './task.model';
+
 import { Exclude } from 'class-transformer';
 import { User } from 'src/auth/user.entity';
+import { TaskStatus } from './taskStatus.enum';
 
 @Entity()
 export class Task extends BaseEntity {
